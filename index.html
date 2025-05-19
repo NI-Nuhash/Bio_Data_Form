@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio Data Form</title>
+  <style>
+    .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* spacing between form groups */
+}
+
+.form-group {
+  flex: 1 1 200px; /* Grow/shrink with a min width */
+  min-width: 200px;
+}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 25px;
+    }
+    legend {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    input[type="file"] {
+      padding: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+    .form-row .form-group {
+      flex: 1;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bio Data Form</h2>
+    <form>
+      
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="photo">Upload Photo</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" name="height" placeholder="e.g. 170" />
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" name="weight" placeholder="e.g. 65" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="skinTone">Skin Tone</label>
+            <input type="text" id="skinTone" name="skinTone" placeholder="e.g. Fair, Medium, Dark" />
+          </div>
+          <div class="form-group">
+            <label for="bloodGroup">Blood Group</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" placeholder="e.g. A+, O-" />
+          </div>
+          <div class="form-group">
+            <label for="maritalStatus">Marital Status</label>
+            <select id="maritalStatus" name="maritalStatus">
+              <option value="">Select</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" placeholder="e.g. Bangladeshi" />
+          </div>
+          <div class="form-group">
+            <label for="hobby">Hobby</label>
+            <input type="text" id="hobby" name="hobby" placeholder="e.g. Reading, Painting" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="presentAddress">Present Address</label>
+          <textarea id="presentAddress" name="presentAddress" rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="permanentAddress">Permanent Address</label>
+          <textarea id="permanentAddress" name="permanentAddress" rows="2"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Parents Information -->
+      <fieldset>
+        <legend>Parents Information</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fatherName">Father's Name</label>
+            <input type="text" id="fatherName" name="fatherName" />
+          </div>
+          <div class="form-group">
+            <label for="fatherOccupation">Occupation</label>
+            <input type="text" id="fatherOccupation" name="fatherOccupation" />
+          </div>
+          <div class="form-group">
+            <label for="fatherInstitution">Institution</label>
+            <input type="text" id="fatherInstitution" name="fatherInstitution" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="motherName">Mother's Name</label>
+            <input type="text" id="motherName" name="motherName" />
+          </div>
+          <div class="form-group">
+            <label for="motherOccupation">Occupation</label>
+            <input type="text" id="motherOccupation" name="motherOccupation" />
+          </div>
+          <div class="form-group">
+            <label for="motherInstitution">Institution</label>
+            <input type="text" id="motherInstitution" name="motherInstitution" />
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Siblings Section -->
+<div id="siblings-container">
+  <fieldset>
+    <legend>Sibling Information</legend>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="siblingName">Name</label>
+        <input type="text" name="siblingName[]" />
+      </div>
+      <div class="form-group">
+        <label for="siblingRelation">Relation</label>
+        <input type="text" name="siblingRelation[]" />
+      </div>
+      <div class="form-group">
+        <label for="siblingOccupation">Occupation</label>
+        <input type="text" name="siblingOccupation[]" />
+      </div>
+    </div>
+  </fieldset>
+</div>
+<button type="button" onclick="addSibling()">Add Sibling</button>
+
+<!-- Uncle/Aunt Section -->
+<div id="uncle-aunt-container">
+  <fieldset>
+    <legend>Relatives Information</legend>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="relativeName">Name</label>
+        <input type="text" name="relativeName[]" />
+      </div>
+      <div class="form-group">
+        <label for="relativeRelation">Relation</label>
+        <input type="text" name="relativeRelation[]" placeholder="e.g. Uncle, Aunt" />
+      </div>
+      <div class="form-group">
+        <label for="relativeOccupation">Occupation</label>
+        <input type="text" name="relativeOccupation[]" />
+      </div>
+    </div>
+  </fieldset>
+</div>
+<button type="button" onclick="addUncleAunt()">Add Relative</button>
+
+<!-- Education -->
+<div id="education-container">
+  <fieldset>
+    <legend>Educational Qualification</legend>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Degree Name</label>
+        <input type="text" name="degreeName[]" placeholder="e.g. BSc in Computer Science" />
+      </div>
+      <div class="form-group">
+        <label>Year</label>
+        <input type="text" name="degreeYear[]" placeholder="e.g. 2024" />
+      </div>
+      <div class="form-group">
+        <label>Institution Name</label>
+        <input type="text" name="degreeInstitution[]" placeholder="e.g. University of XYZ" />
+      </div>
+      <div class="form-group">
+        <label>CGPA/GPA</label>
+        <input type="text" name="degreeResult[]" placeholder="e.g. 3.75" />
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button type="button" onclick="addEducation()">Add Educational Qualification</button>
+
+<!-- Work Experience Section -->
+<div id="work-experience-container">
+  <fieldset>
+    <legend>Professional background</legend>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Company/Organization Name</label>
+        <input type="text" name="companyName[]" placeholder="e.g. ABC Ltd." />
+      </div>
+      <div class="form-group">
+        <label>Position</label>
+        <input type="text" name="position[]" placeholder="e.g. Software Engineer" />
+      </div>
+      <div class="form-group">
+        <label>Duration</label>
+        <input type="text" name="duration[]" placeholder="e.g. Jan 2022 - Present" />
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" name="workDescription[]" placeholder="Brief job responsibilities" />
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+      <button type="submit">Submit Bio Data</button>
+      <button type="reset">Clear Form</button>
+    </form>
+  </div>
+</body>
+</html>
+
+<script>
+  function addSibling() {
+    const container = document.getElementById('siblings-container');
+
+    const fieldset = document.createElement('fieldset');
+    const formRow = document.createElement('div');
+    formRow.className = 'form-row';
+
+    formRow.innerHTML = `
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="siblingName[]" />
+      </div>
+      <div class="form-group">
+        <label>Relation</label>
+        <input type="text" name="siblingRelation[]" />
+      </div>
+      <div class="form-group">
+        <label>Occupation</label>
+        <input type="text" name="siblingOccupation[]" />
+      </div>
+    `;
+
+    fieldset.appendChild(formRow);
+    container.appendChild(fieldset);
+  }
+</script>
+
+
+<script>
+  function addUncleAunt() {
+    const container = document.getElementById('uncle-aunt-container');
+    
+    const fieldset = document.createElement('fieldset');
+    const formRow = document.createElement('div');
+    formRow.className = 'form-row';
+
+    formRow.innerHTML = `
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="relativeName[]" />
+      </div>
+      <div class="form-group">
+        <label>Relation</label>
+        <input type="text" name="relativeRelation[]" placeholder="e.g. Uncle, Aunt" />
+      </div>
+      <div class="form-group">
+        <label>Occupation</label>
+        <input type="text" name="relativeOccupation[]" />
+      </div>
+    `;
+
+    fieldset.appendChild(formRow);
+    container.appendChild(fieldset);
+  }
+</script>
+
+<script>
+  function addEducation() {
+    const container = document.getElementById('education-container');
+
+    const fieldset = document.createElement('fieldset');
+    const formRow = document.createElement('div');
+    formRow.className = 'form-row';
+
+    formRow.innerHTML = `
+      <div class="form-group">
+        <label>Degree Name</label>
+        <input type="text" name="degreeName[]" placeholder="e.g. BSc in Computer Science" />
+      </div>
+      <div class="form-group">
+        <label>Year</label>
+        <input type="text" name="degreeYear[]" placeholder="e.g. 2024" />
+      </div>
+      <div class="form-group">
+        <label>Institution Name</label>
+        <input type="text" name="degreeInstitution[]" placeholder="e.g. University of XYZ" />
+      </div>
+      <div class="form-group">
+        <label>CGPA/GPA</label>
+        <input type="text" name="degreeResult[]" placeholder="e.g. 3.75" />
+      </div>
+    `;
+
+    fieldset.appendChild(formRow);
+    container.appendChild(fieldset);
+  }
+</script>
+
+<script>
+  function addSkill() {
+    const container = document.getElementById('skills-container');
+
+    const formRow = document.createElement('div');
+    formRow.className = 'form-row';
+
+    formRow.innerHTML = `
+      <div class="form-group">
+        <label>Skill</label>
+        <input type="text" name="skills[]" placeholder="e.g. Leadership, Java, Excel" />
+      </div>
+    `;
+
+    container.appendChild(formRow);
+  }
+</script>
